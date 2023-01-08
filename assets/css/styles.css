@@ -7,6 +7,11 @@
     --primary-color: #0f1b4c;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
     /* Xác định lại cở chữ ban đầu cho toàn bộ trang web */
@@ -60,16 +65,26 @@ a {
 }
 
 /* header */
-.header {
+.fixed-header {
     background: #e6f0ff;
-    height: 100vh;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #e6f0ff;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -77,7 +92,7 @@ a {
     margin-left: 50px;
 }
 
-.navbar .action {
+.navbar .actions {
     margin-left: auto;
 }
 
@@ -185,7 +200,7 @@ a {
     display: flex;
     align-items: center;
     height: 90px;
-    padding:  0 42px;
+    padding: 0 42px;
     border-radius: 12px;
 }
 
